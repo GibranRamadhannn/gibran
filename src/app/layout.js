@@ -1,6 +1,7 @@
 import { Space_Mono, Montserrat } from "next/font/google";
 import "./globals.css";
 import { env } from "prisma/config";
+import { Analytics } from "@vercel/analytics/next";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
         <div className="min-h-screen">
           <main className="layout">{children}</main>
         </div>
+        <Analytics />
       </body>
     </html>
   );
